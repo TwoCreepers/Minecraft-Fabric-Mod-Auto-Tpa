@@ -22,22 +22,23 @@ public class AutoTpaClient implements ClientModInitializer {
     public void onInitializeClient() {
         ConfigManager.register();
         AutoConfig.getGuiRegistry(ModConfig.class).registerTypeProvider(new StringListGuiProvider(), List.class);
-        ClientReceiveMessageEvents.GAME.register(this::onMessage);
+        ClientReceiveMessageEvents.ALLOW_GAME.register(this::onMessage);
         AutoTpa.LOGGER.info(AutoTpa.MOD_ID + " init");
     }
-    public void onMessage(Text message, boolean overlay) {
+
+    public boolean onMessage(Text message, boolean overlay) {
         // 检查是否达到工作条件
-        if (overlay) return;
+        if (overlay) return true;
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client.player == null) return;
+        if (client.player == null) return true;
         ChatHud hud = client.inGameHud.getChatHud();
-        if (hud == null) return;
+        if (hud == null) return true;
         ModConfig config = ConfigManager.getConfig();
-        if (config.autoAcceptEnabled) return;
+        if (!config.autoAcceptEnabled) return true;
         String rawMessage = message.getString();
         Pattern tpaPattern = Pattern.compile(config.tpaPattern);
         Matcher matcher = tpaPattern.matcher(rawMessage);
-        if (!matcher.find()) return;
+        if (!matcher.find()) return true;
 
         String senderName = matcher.group(1);
 
@@ -49,23 +50,24 @@ public class AutoTpaClient implements ClientModInitializer {
         if (config.blacklist.contains(senderName)) {
             if (config.showNotification) {
                 Objects.requireNonNull(client.getNetworkHandler()).sendChatCommand(commandReject);
-                client.execute(()->hud.addMessage(Text.of("§c[自动TPA] 拒绝黑名单玩家: " + senderName)));
+                client.execute(() -> hud.addMessage(Text.of("§c[自动TPA] 拒绝黑名单玩家: " + senderName)));
             }
-            return;
+            return true;
         }
         // 检查好友模式和白名单
         if (config.onlyFromFriends && !config.whitelist.contains(senderName)) {
             if (config.showNotification) {
                 Objects.requireNonNull(client.getNetworkHandler()).sendChatCommand(commandReject);
-                client.execute(()->hud.addMessage(Text.of("§6[自动TPA] 拒绝非白名单玩家: " + senderName)));
+                client.execute(() -> hud.addMessage(Text.of("§6[自动TPA] 拒绝非白名单玩家: " + senderName)));
             }
-            return;
+            return true;
         }
         // 发送通知
         if (config.showNotification) {
             String delayMsg = "§a[自动TPA] 正在接受来自 " + senderName + " 的传送请求";
-            client.execute(()->hud.addMessage(Text.of(delayMsg)));
+            client.execute(() -> hud.addMessage(Text.of(delayMsg)));
         }
         Objects.requireNonNull(client.getNetworkHandler()).sendChatCommand(commandAccept);
+        return true;
     }
 }
