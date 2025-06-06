@@ -1,0 +1,22 @@
+{
+  "text.autoconfig.AutoTpa.category.advanced": "高级设置",
+  "text.autoconfig.AutoTpa.category.filter": "过滤规则",
+  "text.autoconfig.AutoTpa.category.general": "通用设置",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled": "自动接受TPA",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled.@PrefixText": "启用后，所有TPA请求将自动接受（无需确认）！\n请注意！该mod存在一个已知危险度中等且无法修复的bug\n该bug可能会导致黑名单用户的请求被同意",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled.@Tooltip": "自动接受传入的TPA请求",
+  "text.autoconfig.AutoTpa.option.blacklist": "黑名单",
+  "text.autoconfig.AutoTpa.option.blacklist.@Tooltip": "禁止发送TPA的玩家",
+  "text.autoconfig.AutoTpa.option.customAcceptCommand": "自定义接受命令",
+  "text.autoconfig.AutoTpa.option.customAcceptCommand.@Tooltip": "替代/tpaccept的自定义命令",
+  "text.autoconfig.AutoTpa.option.customRejectCommand": "自定义拒绝命令",
+  "text.autoconfig.AutoTpa.option.customRejectCommand.@Tooltip": "替代/tpdeny的自定义命令",
+  "text.autoconfig.AutoTpa.option.general": "General",
+  "text.autoconfig.AutoTpa.option.onlyFromFriends": "仅限好友",
+  "text.autoconfig.AutoTpa.option.onlyFromFriends.@Tooltip": "只自动接受来自好友的TPA",
+  "text.autoconfig.AutoTpa.option.showNotification": "显示通知",
+  "text.autoconfig.AutoTpa.option.showNotification.@Tooltip": "自动接受时在聊天栏显示通知",
+  "text.autoconfig.AutoTpa.option.whitelist": "白名单",
+  "text.autoconfig.AutoTpa.option.whitelist.@Tooltip": "始终允许发送TPA的玩家",
+  "text.autoconfig.AutoTpa.title": "自动TPA设置"
+}

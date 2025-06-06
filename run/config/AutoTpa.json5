@@ -1,0 +1,9 @@
+{
+	"autoAcceptEnabled": true,
+	"showNotification": true,
+	"onlyFromFriends": false,
+	"whitelist": [],
+	"blacklist": [],
+	"customAcceptCommand": "tpac",
+	"customRejectCommand": "tpa refuse"
+}

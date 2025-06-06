@@ -1,0 +1,22 @@
+{
+  "text.autoconfig.AutoTpa.category.advanced": "Advanced Settings",
+  "text.autoconfig.AutoTpa.category.filter": "Filter Rules",
+  "text.autoconfig.AutoTpa.category.general": "General Settings",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled": "Auto Accept TPA",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled.@PrefixText": "When enabled, all TPA requests will be accepted automatically (no confirmation required)!\nWarning! This mod has a known medium-risk bug that cannot be fixed\nThis bug may cause requests from blacklisted users to be accepted",
+  "text.autoconfig.AutoTpa.option.autoAcceptEnabled.@Tooltip": "Automatically accept incoming TPA requests",
+  "text.autoconfig.AutoTpa.option.blacklist": "Blacklist",
+  "text.autoconfig.AutoTpa.option.blacklist.@Tooltip": "Players who are not allowed to send TPA requests",
+  "text.autoconfig.AutoTpa.option.customAcceptCommand": "Custom Accept Command",
+  "text.autoconfig.AutoTpa.option.customAcceptCommand.@Tooltip": "Custom command to replace /tpaccept",
+  "text.autoconfig.AutoTpa.option.customRejectCommand": "Custom Reject Command",
+  "text.autoconfig.AutoTpa.option.customRejectCommand.@Tooltip": "Custom command to replace /tpdeny",
+  "text.autoconfig.AutoTpa.option.general": "General",
+  "text.autoconfig.AutoTpa.option.onlyFromFriends": "Friends Only",
+  "text.autoconfig.AutoTpa.option.onlyFromFriends.@Tooltip": "Only auto-accept TPA requests from friends",
+  "text.autoconfig.AutoTpa.option.showNotification": "Show Notification",
+  "text.autoconfig.AutoTpa.option.showNotification.@Tooltip": "Show notifications in chat when auto-accepting",
+  "text.autoconfig.AutoTpa.option.whitelist": "Whitelist",
+  "text.autoconfig.AutoTpa.option.whitelist.@Tooltip": "Players who are always allowed to send TPA requests",
+  "text.autoconfig.AutoTpa.title": "Auto TPA Settings"
+}

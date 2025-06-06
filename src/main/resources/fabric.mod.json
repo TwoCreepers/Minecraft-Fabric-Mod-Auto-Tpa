@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "auto_tpa",
+  "version": "${version}",
+  "name": "Auto Tpa",
+  "description": "自动管理Tpa",
+  "authors": ["观赏鱼"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/auto_tpa/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.guanshangyu.auto_tpa.client.AutoTpaDataGenerator"
+    ],
+    "client": [
+      "com.guanshangyu.auto_tpa.client.AutoTpaClient"
+    ],
+    "main": [
+      "com.guanshangyu.auto_tpa.AutoTpa"
+    ],
+    "modmenu": [
+      "com.guanshangyu.auto_tpa.client.config.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "cloth-config": ">=11.1.106",
+    "modmenu": ">=7.2.1"
+  }
+}
