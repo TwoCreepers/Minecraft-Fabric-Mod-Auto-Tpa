@@ -42,7 +42,7 @@ public class ModConfig implements ConfigData {
     public String customRejectCommand = "tpa refuse";
 
     @ConfigEntry.Category("advanced")
-    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.Gui.Tooltip(count = 4)
     public String tpaPattern = "^\\[TpaCommand] 你收到一条同意 (\\w+) 传送至你的请求，使用 /tpac \\| /tpa \\(accept\\|refuse\\) 接受或拒绝，有效期为一分钟。$";
 
     @ConfigEntry.Category("advanced")

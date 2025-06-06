@@ -5,5 +5,6 @@
 	"whitelist": [],
 	"blacklist": [],
 	"customAcceptCommand": "tpac",
-	"customRejectCommand": "tpa refuse"
+	"customRejectCommand": "tpa refuse",
+	"tpaPattern": "^\\[TpaCommand] 你收到一条同意 (\\w+) 传送至你的请求，使用 /tpac \\| /tpa \\(accept\\|refuse\\) 接受或拒绝，有效期为一分钟。$"
 }
