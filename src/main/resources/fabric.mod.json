@@ -2,10 +2,13 @@
   "schemaVersion": 1,
   "id": "auto_tpa",
   "version": "${version}",
-  "name": "Auto Tpa",
+  "name": "Auto Tpac",
   "description": "自动管理Tpa",
-  "authors": ["观赏鱼"],
-  "contact": {},
+  "authors": ["观赏鱼", "狐仙大人"],
+  "contact": {
+    "sources": "https://github.com/TwoCreepers/Minecraft-Fabric-Mod-Auto-Tpa",
+    "issues": "https://github.com/TwoCreepers/Minecraft-Fabric-Mod-Auto-Tpa/issues"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/auto_tpa/icon.png",
   "environment": "client",
